@@ -3,11 +3,11 @@ from requests.exceptions import RequestException
 from contextlib import closing
 from requests import get
 import webapp2 as webapp
-from dateutil import parser
-import datetime
-import numpy as np
-import scipy.stats as si
-import math
+# from dateutil import parser
+# import datetime
+# import numpy as np
+# import scipy.stats as si
+# import math
 
 def Output(input):
 # should output to file on google cloud storage??
