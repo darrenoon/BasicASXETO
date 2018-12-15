@@ -44,9 +44,9 @@ def log_error(e):
 	This function just prints them, but you can
 	make it do anything.
 	"""
-	# print(e)
+	print(e)
 
-	input_code = "xjo"
+def get_options_prices_asx(input_code):		
 	input_url = "https://www.asx.com.au/asx/markets/optionPrices.do?by=underlyingCode&underlyingCode=" + input_code + "&expiryDate=&optionType=B"
 
 	raw_html = simple_get(input_url)
@@ -74,7 +74,10 @@ def log_error(e):
 
 class HelloWebapp(webapp.RequestHandler):
 	def get(self):
-		t = log_error('abc')
+		t = get_options_prices_asx("bhp")
+		self.response.write("<br>******<br>")
+		self.response.write(t)
+		t = get_options_prices_asx("xjo")
 		self.response.write("<br>******<br>")
 		self.response.write(t)
 
