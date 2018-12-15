@@ -65,7 +65,7 @@ def get_options_prices_asx(input_code):
 		if "Code," not in ParseText:
 			if "Options," not in ParseText:
 				# global OptionPriceOutput
-				OptionPriceOutput += ParseText + '\n'
+				OptionPriceOutput += ParseText + '<br>'
 
 	return OptionPriceOutput
 
