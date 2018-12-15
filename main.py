@@ -81,9 +81,15 @@ class HelloWebapp(webapp.RequestHandler):
 		self.response.write("<br>******<br>")
 		self.response.write(t)
 
+class GetFromUrl(webapp.RequestHandler):
+	def get(self, input_code):
+		t = get_options_prices_asx(input_code)
+		self.response.write("<br>******<br>")
+		self.response.write(t)		
 
 app = webapp.WSGIApplication([
-    ('/', HelloWebapp),
+    ('/(\w+)', GetFromUrl),	
+    ('/', HelloWebapp),	
 ], debug=True)
 
 # print(log_error('abc'))
