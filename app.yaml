@@ -1,1 +1,5 @@
 runtime: python37
+
+libraries:
+- name: numpy
+  version: "1.6.1"
