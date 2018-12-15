@@ -4,10 +4,10 @@ from contextlib import closing
 from requests import get
 import webapp2 as webapp
 # from dateutil import parser
-# import datetime
+import datetime
 # import numpy as np
 # import scipy.stats as si
-# import math
+import math
 
 def Output(input):
 # should output to file on google cloud storage??
