@@ -2,4 +2,4 @@ webapp2==3.0.0b1
 bs4==0.0.1
 requests==2.20.0
 numpy
-scipy
+scipy==1.1.0
