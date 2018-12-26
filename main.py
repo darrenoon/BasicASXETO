@@ -6,7 +6,7 @@ import webapp2 as webapp
 # from dateutil import parser
 import datetime
 import numpy as np
-import scipy.stats as si
+# import scipy.stats as si
 import math
 
 def Output(input):
@@ -84,8 +84,6 @@ class HelloWebapp(webapp.RequestHandler):
 class GetFromUrl(webapp.RequestHandler):
 	def get(self, input_code):		
 		t = get_options_prices_asx(input_code)
-		testSi = type(si)
-		self.response.write(testSi)		
 		self.response.write("<br>******<br>")
 		self.response.write(t)		
 
