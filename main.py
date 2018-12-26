@@ -82,8 +82,10 @@ class HelloWebapp(webapp.RequestHandler):
 		self.response.write(t)
 
 class GetFromUrl(webapp.RequestHandler):
-	def get(self, input_code):
+	def get(self, input_code):		
 		t = get_options_prices_asx(input_code)
+		testSi = type(si)
+		self.response.write(testSi)		
 		self.response.write("<br>******<br>")
 		self.response.write(t)		
 
